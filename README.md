@@ -63,6 +63,8 @@ Docker needs its engine running before any `docker run` command will work. Start
 Desktop** first (Start Menu → Docker Desktop, or launch it from the taskbar), or launch it
 from a terminal:
 Reference: https://docs.docker.com/reference/cli/docker/desktop/
+
+Use preferred command depending on your OS
 ```
 # PowerShell / Git Bash on Windows
 "C:\Program Files\Docker\Docker\Docker Desktop.exe" 
@@ -70,7 +72,10 @@ Reference: https://docs.docker.com/reference/cli/docker/desktop/
 # macOS
 open -a Docker
 
-# Windows, macOS and Linux
+# linux
+systemctl --user start docker-desktop
+
+# Windows, macOS
 docker desktop start
 ```
 
@@ -179,12 +184,9 @@ pass locally first.
 Create an **empty** repo on GitHub named `demo-app` (no README, no .gitignore). Then:
 
 ```
-git init
 git add .
 git commit -m "Initial Loco app with posts scaffold"
-git branch -M main
-git remote add origin https://github.com/$GH_OWNER/$GH_REPO.git  # ← use your own GitHub username/repo here
-git push -u origin main
+git push
 ```
 
 ---
