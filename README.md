@@ -152,7 +152,7 @@ After app is started, in the second terminal test with:
 ```
 curl -X POST localhost:5150/api/posts \
   -H "Content-Type: application/json" \
-  -d '{"title": "My First Post With Loco", "published": True}'
+  -d '{"title": "My First Post With Loco", "published": true}'
 ```
 ```
 curl localhost:5150/api/posts
